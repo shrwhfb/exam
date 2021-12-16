@@ -1,0 +1,296 @@
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+
+
+html, body {
+    height: 100%;
+    
+
+}
+#wrapper {
+    width:100%;
+    height:100%;
+    
+}
+
+
+
+
+header {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:200px;
+    font-size: 40px;
+    background-color: #000080;
+
+   
+
+}
+svg {
+    position: absolute;
+    animation: fill 1s linear forwards 5s;
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: red;
+    }
+}
+svg path {
+    stroke: red;
+    stroke-width: 2px;
+    animation: stroke 5s linear infinite ;
+}
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+    100%{
+        fill: red;
+
+    }
+}
+
+svg path:nth-child(1) {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+}
+
+
+
+
+.content {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+    height:400px;
+    box-sizing: border-box;
+    padding: 20% 20% 20% 20%;
+    background-color: gray;
+}
+.left-side{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:400px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color:#5F85BB;
+    
+}
+table {
+    border: 1px solid #333333;
+    font-size: 0.8rem;
+    }
+
+td, th {
+    border: 1px solid #333333;
+    text-align: center;
+    }
+.profile{
+        padding-top: 20px;
+        width:  100px;
+        height: 100px;
+        border-radius: 100%;
+        
+     
+     }
+    
+
+
+
+
+.cube {
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    /*transition: 2s;*/
+
+ 
+
+
+}
+
+.cube:hover {
+    animation: ani 5s linear infinite;
+  
+}
+@keyframes ani {
+    
+    100% {
+        transform: rotateY(1turn) 
+    }
+}
+
+
+
+.cube div {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    
+}
+.cube .top, .cube .bottom {
+    width: 400px;
+    height: 400px;
+    
+}
+.cube .left, .cube .right {
+    width: 400px;
+    height: 400px;
+} 
+
+
+.cube .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: var(--color2);
+}
+.cube .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: var(--color3);
+}
+.cube .left {
+    transform: rotateY(-90deg) translateZ(150px);
+    background-color: var(--color4);
+}
+.cube .right {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: var(--color5);
+}
+.cube .front {
+    transform: translateZ(50px);
+    background-color: var(--color6);
+}
+.cuber .back {
+    transform: rotateY(0.5turn) translateZ(50px);
+    background-color: var(--color7);
+}
+
+.cube img{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ footer { 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+    background-color:black;
+    box-sizing: border-box;
+   
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+
+}
+
+ .wrapper a{
+        
+    font-size: 1em;
+    color: white;
+    letter-spacing: .15em;
+    
+   
+}
+
+.wrapper .circle
+{
+
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 1px solid white;
+    animation: ani 5s linear infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+
+}
+
+@keyframes ani{
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.wrapper .circle:nth-child(2){
+    animation-direction: reverse;
+}
+.wrapper .circle:nth-child(3){
+    
+    animation-delay: 3s;
+   
+}
+
+
+
+
+@media all and (min-width: 641px) {
+ 
+    header{
+        background-color: black;
+    }
+    
+    header, footer {
+        width: 100%;
+        height: 20%;
+        
+    }
+
+    footer {
+        clear: both;
+    }
+    .content {
+        float:left;
+        width: 50%;
+        height: 80%;
+        background-color: skyblue;
+    }
+    .left-side {
+        clear: none;
+        float:left;
+        width: 50%;
+        height: 60%;
+    }
+   
+
+}
